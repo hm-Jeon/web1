@@ -1,55 +1,74 @@
 <!doctype html>
 <html>
-<head>
-  <title>WEB1 - CSS</title>
-  <meta charset="utf-8">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174515315-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <head>
+    <title>WEB1 - CSS</title>
+    <meta charset="utf-8">
+    <style>
+      body {
+        margin: 0;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+      }
+      h1 {
+        font-size: 45px;
+        text-align: center;
+        border-bottom: 1px solid gray;
+        margin: 0;
+        padding: 20px;
+      }
+      ol {
+        border-right: 1px solid gray;
+        width: 100px;
+        margin: 0;
+        padding: 20px;
+      }
+      #grid {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+      }
+      #grid ol {
+        padding-left: 33px;
+      }
+      #grid #article {
+        padding-left: 25px;
+      }
+      @media(max-width: 800px) {
+        #grid {
+          display: block;
+        }
+        ol {
+          border-right: none;
+        }
+        h1 {
+          border-bottom: none;
+        }
+        #grid #article {
+          padding-left: 15px;
+        }
+      }
+    </style>
+  </head>
 
-    gtag('config', 'UA-174515315-1');
-  </script>
-</head>
-
-<body>
-  <h1><a href="index.html" title="Welcome">WEB</a></h1>
-  <ol>
-    <li><a href="1.html" title="HTML">HTML</a></li>
-    <li><a href="2.html" title="CSS">CSS</a></li>
-    <li><a href="3.html" title="JavaScript">JavaScript</a></li>
-  </ol>
-  <h2>CSS</h2>
-  <p>
-    Cascading Style Sheets (CSS) is a <strong><u>style sheet language</u> used for describing the presentation of a document written in a markup language like <u><a href="https://www.w3.org/TR/2011/WD-html5-20110405/" title="HTML5 Specification" target="_blank">HTML</a></u>.</strong> CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
-  </p>
-  <img src="image.jpg" width="80%">
-  <p>
-    CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file which reduces complexity and repetition in the structural content as well as enabling the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.
-  </p>
-  <p>
-    <div id="disqus_thread"></div>
-    <script>
-
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://web1-gp2vomymh2.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </p>
-</body>
+  <body>
+    <h1><a href="index.html" title="Welcome">WEB</a></h1>
+    <div id="grid">
+      <ol>
+        <li><a href="1.html" title="HTML">HTML</a></li>
+        <li><a href="2.html" title="CSS">CSS</a></li>
+        <li><a href="3.html" title="JavaScript">JavaScript</a></li>
+      </ol>
+      <div id="article">
+        <h2>CSS</h2>
+        <p>
+          Cascading Style Sheets (CSS) is a <strong><u>style sheet language</u> used for describing the presentation of a document written in a markup language like <u><a href="https://www.w3.org/TR/2011/WD-html5-20110405/" title="HTML5 Specification" target="_blank">HTML</a></u>.</strong> CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+        </p>
+        <img src="image.jpg" width="90%">
+        <p>
+          CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file which reduces complexity and repetition in the structural content as well as enabling the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.
+        </p>
+      </div>
+    </div>
+  </body>
 </html>

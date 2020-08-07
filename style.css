@@ -8,12 +8,12 @@ a {
 h1 {
   font-size: 45px;
   text-align: center;
-  border-bottom: 1px solid gray;
+  border-bottom: 2px solid black;
   margin: 0;
   padding: 20px;
 }
 ol {
-  border-right: 1px solid gray;
+  border-right: 2px solid black;
   width: 100px;
   margin: 0;
   padding: 20px;
@@ -27,6 +27,9 @@ ol {
 }
 #grid #article {
   padding-left: 25px;
+}
+li {
+  margin-top: 5px;
 }
 @media(max-width: 800px) {
   #grid {
